@@ -15,21 +15,21 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: baseUrl,
-    title: "Your Name — Academic Profile",
+    title: "Zhuang Kang — PhD Candidate in Computer Science",
     description:
-      "Research, publications, master’s students, supervision, and contact information.",
+      "Zhuang Kang is a PhD candidate at LIACS, Leiden University, researching hydrogen energy systems, electrolyzer simulation, and optimization.",
     openGraph: {
-      title: "Your Name — Academic Profile",
+      title: "Zhuang Kang — PhD Candidate in Computer Science",
       description:
-        "Research, publications, master’s students, supervision, and contact information.",
+        "Research on hydrogen energy systems, electrolyzer simulation, and optimization at Leiden University.",
       type: "profile",
       images: [new URL("/og.png", baseUrl).toString()],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Your Name — Academic Profile",
+      title: "Zhuang Kang — PhD Candidate in Computer Science",
       description:
-        "Research, publications, master’s students, supervision, and contact information.",
+        "Research on hydrogen energy systems, electrolyzer simulation, and optimization at Leiden University.",
       images: [new URL("/og.png", baseUrl).toString()],
     },
     icons: {

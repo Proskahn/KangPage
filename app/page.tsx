@@ -1,93 +1,85 @@
 const publications = [
   {
-    title: "Title of your most recent publication",
-    authors: "Your Name and Co-author Name",
-    venue: "Journal or Conference Name, 2026",
-    href: "https://doi.org/",
-  },
-  {
-    title: "A second publication title belongs here",
-    authors: "Your Name and Collaborator Name",
-    venue: "Journal or Conference Name, 2025",
-    href: "https://doi.org/",
-  },
-  {
-    title: "An earlier article, chapter, or working paper",
-    authors: "Your Name",
-    venue: "Publisher or Working Paper Series, 2024",
-    href: "https://doi.org/",
+    title: "A Review of Model-Based Optimization for Hydrogen Refueling Stations",
+    authors:
+      "Zhuang Kang, Jacob de Nobel, Michael Emmerich, Thomas Bäck, and Yingjie Fan",
+    venue:
+      "Advances in Evolutionary and Deterministic Methods for Design, Optimization and Control, Springer, 2026",
+    href: "https://link.springer.com/chapter/10.1007/978-3-032-21893-3_17",
   },
 ];
 
-const students = [
+const formerStudents = [
   {
-    name: "Student name",
-    topic: "Master’s thesis topic",
-    period: "2025–2026",
+    name: "Dunxiang Lu",
+    topic:
+      "Energy Management for Hydrogen Refueling Stations: A Synergistic Approach of Cascade Compression Architecture and Deep Reinforcement Learning",
   },
   {
-    name: "Student name",
-    topic: "Master’s thesis topic",
-    period: "2025–2026",
+    name: "Di Xie",
+    topic:
+      "Deep Reinforcement Learning vs. Engineering Rules for Hybrid EV/FCEV Charging Hub Scheduling with Cascade Hydrogen Storage",
   },
+];
+
+const currentStudents = [
   {
-    name: "Student name",
-    topic: "Master’s thesis topic",
-    period: "2024–2025",
+    name: "Dongjie Chen",
+    topic:
+      "Incremental Techno-Economic Analysis of RL-Controlled Cascade Compression-Storage in Hydrogen Refueling Stations",
   },
 ];
 
 export default function Home() {
   return (
     <main id="top">
-      <h1>Homepage of Your Name</h1>
+      <h1>Zhuang Kang</h1>
 
       <section className="profile" aria-label="Profile and contact information">
         <div
           className="photoPlaceholder"
           role="img"
-          aria-label="Placeholder for your photograph"
+          aria-label="Placeholder for a photograph of Zhuang Kang"
         >
           Your photo
         </div>
 
         <div className="contact" id="contact">
           <p>
-            <strong>Your Name</strong>
+            <strong>Zhuang Kang</strong>
             <br />
-            Professor / Researcher
+            PhD Candidate in Computer Science
             <br />
-            <a href="https://www.example.edu/">Department Name</a>
+            <a href="https://liacs.leidenuniv.nl/">
+              Leiden Institute of Advanced Computer Science
+            </a>
             <br />
-            <a href="https://www.example.edu/">University Name</a>
+            <a href="https://www.universiteitleiden.nl/en">Leiden University</a>
             <br />
-            Street and building
+            Einsteinweg 55
             <br />
-            Postal code, City, Country
+            2333 CC Leiden, The Netherlands
           </p>
 
           <p>
             <strong>Email:</strong>{" "}
-            <a href="mailto:your.name@university.edu">
-              your.name@university.edu
-            </a>
-            <br />
-            <strong>Address:</strong>{" "}
-            <a href="https://maps.google.com/?q=University">
-              view on map
+            <a href="mailto:z.kang@liacs.leidenuniv.nl">
+              z.kang@liacs.leidenuniv.nl
             </a>
           </p>
 
           <p>
-            <strong>Publications:</strong>{" "}
-            <a href="https://scholar.google.com/">Google Scholar</a>,{" "}
-            <a href="https://orcid.org/">ORCID</a>,{" "}
-            <a href="#publications">selected publications below</a>
+            <strong>Profiles:</strong>{" "}
+            <a href="https://orcid.org/0009-0009-8694-1947">ORCID</a>,{" "}
+            <a href="#publications">publications</a>
           </p>
         </div>
 
         <nav aria-label="Page sections">
           <ul>
+            <li>
+              <a href="#recent-activities">Recent activities</a>
+            </li>
             <li>
               <a href="#introduction">Introduction</a>
             </li>
@@ -97,11 +89,25 @@ export default function Home() {
             <li>
               <a href="#supervision">Master’s students and supervision</a>
             </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
           </ul>
         </nav>
+      </section>
+
+      <hr />
+
+      <section id="recent-activities">
+        <h2>Recent activities</h2>
+        <hr />
+        <ul>
+          <li>
+            Our review paper, “A Review of Model-Based Optimization for Hydrogen
+            Refueling Stations,” was published by Springer in June 2026. {" "}
+            <a href="https://link.springer.com/chapter/10.1007/978-3-032-21893-3_17">
+              Read the paper
+            </a>
+            .
+          </li>
+        </ul>
       </section>
 
       <hr />
@@ -110,15 +116,21 @@ export default function Home() {
         <h2>Introduction</h2>
         <hr />
         <p>
-          I am a researcher and educator interested in questions that matter
-          both within the university and beyond it. My work combines careful
-          analysis with open collaboration, with the aim of producing research
-          that is rigorous, clearly communicated, and useful to other scholars,
-          students, and practitioners.
+          I am Zhuang Kang (康庄), a PhD candidate in computer science at Leiden
+          University, supervised by Yingjie Fan and Thomas Bäck. I work on
+          HyPro, a Dutch hydrogen research project, where I develop a digital
+          twin of a PEM electrolyzer.
         </p>
+        <p>My research focuses on:</p>
+        <ol>
+          <li>
+            simulation and black-box optimization of electrolyzers; and
+          </li>
+          <li>optimal control of hydrogen energy systems.</li>
+        </ol>
         <p>
-          This text can be replaced with your biography, current position,
-          research interests, and academic background.
+          With a background in mathematics, I now work at the intersection of
+          modeling, optimization, and hydrogen energy systems.
         </p>
       </section>
 
@@ -127,10 +139,6 @@ export default function Home() {
       <section id="publications">
         <h2>Publications</h2>
         <hr />
-        <p>
-          A complete list of publications can be found on my{" "}
-          <a href="https://scholar.google.com/">Google Scholar profile</a>.
-        </p>
         <ol className="publicationList">
           {publications.map((publication) => (
             <li key={publication.title}>
@@ -147,26 +155,41 @@ export default function Home() {
       <section id="supervision">
         <h2>Master’s students and supervision</h2>
         <hr />
-        <p>
-          I supervise master’s work that is well scoped, methodologically sound,
-          and connected to a meaningful research question.
-        </p>
 
-        <h3>Current and recent master’s students</h3>
+        <h3>Completed master’s theses</h3>
         <ul>
-          {students.map((student, index) => (
-            <li key={`${student.name}-${index}`}>
-              <strong>{student.name}</strong> ({student.period}). {student.topic}.
+          {formerStudents.map((student) => (
+            <li key={student.name}>
+              <strong>{student.name}:</strong> {student.topic}
+            </li>
+          ))}
+        </ul>
+
+        <h3>Current master’s students</h3>
+        <ul>
+          {currentStudents.map((student) => (
+            <li key={student.name}>
+              <strong>{student.name}:</strong> {student.topic}
             </li>
           ))}
         </ul>
 
         <h3>Prospective students</h3>
+        <p>I welcome students interested in:</p>
+        <ol>
+          <li>optimal control of energy systems; or</li>
+          <li>multiphysics simulation with OpenFOAM.</li>
+        </ol>
         <p>
-          If you are interested in working with me, please send a short
-          introduction, the name of your programme, and one or two possible
-          research questions by{" "}
-          <a href="mailto:your.name@university.edu">email</a>.
+          To get in touch, send a short {" "}
+          <a href="mailto:z.kang@liacs.leidenuniv.nl">email</a> with your name,
+          degree programme, and preferred topic. I will reply and arrange a
+          meeting.
+        </p>
+        <p>
+          Students have considerable freedom to develop their own research
+          direction. I value open discussion about research goals, timelines,
+          and practical concerns.
         </p>
       </section>
 
