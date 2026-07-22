@@ -1,23 +1,20 @@
 const publications = [
   {
-    year: "2026",
     title: "Title of your most recent publication",
-    authors: "Your Name, Co-author Name",
-    venue: "Journal or Conference Name",
+    authors: "Your Name and Co-author Name",
+    venue: "Journal or Conference Name, 2026",
     href: "https://doi.org/",
   },
   {
-    year: "2025",
     title: "A second publication title belongs here",
-    authors: "Your Name, Collaborator Name",
-    venue: "Journal or Conference Name",
+    authors: "Your Name and Collaborator Name",
+    venue: "Journal or Conference Name, 2025",
     href: "https://doi.org/",
   },
   {
-    year: "2024",
     title: "An earlier article, chapter, or working paper",
     authors: "Your Name",
-    venue: "Publisher or Working Paper Series",
+    venue: "Publisher or Working Paper Series, 2024",
     href: "https://doi.org/",
   },
 ];
@@ -26,200 +23,159 @@ const students = [
   {
     name: "Student name",
     topic: "Master’s thesis topic",
-    period: "2025–26",
+    period: "2025–2026",
   },
   {
     name: "Student name",
     topic: "Master’s thesis topic",
-    period: "2025–26",
+    period: "2025–2026",
   },
   {
     name: "Student name",
     topic: "Master’s thesis topic",
-    period: "2024–25",
+    period: "2024–2025",
   },
 ];
 
 export default function Home() {
   return (
-    <main>
-      <header className="siteHeader">
-        <a className="wordmark" href="#top" aria-label="Back to top">
-          YN<span className="wordmarkDot">.</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#about">Introduction</a>
-          <a href="#publications">Publications</a>
-          <a href="#supervision">Supervision</a>
-          <a href="#contact">Contact</a>
+    <main id="top">
+      <h1>Homepage of Your Name</h1>
+
+      <section className="profile" aria-label="Profile and contact information">
+        <div
+          className="photoPlaceholder"
+          role="img"
+          aria-label="Placeholder for your photograph"
+        >
+          Your photo
+        </div>
+
+        <div className="contact" id="contact">
+          <p>
+            <strong>Your Name</strong>
+            <br />
+            Professor / Researcher
+            <br />
+            <a href="https://www.example.edu/">Department Name</a>
+            <br />
+            <a href="https://www.example.edu/">University Name</a>
+            <br />
+            Street and building
+            <br />
+            Postal code, City, Country
+          </p>
+
+          <p>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:your.name@university.edu">
+              your.name@university.edu
+            </a>
+            <br />
+            <strong>Address:</strong>{" "}
+            <a href="https://maps.google.com/?q=University">
+              view on map
+            </a>
+          </p>
+
+          <p>
+            <strong>Publications:</strong>{" "}
+            <a href="https://scholar.google.com/">Google Scholar</a>,{" "}
+            <a href="https://orcid.org/">ORCID</a>,{" "}
+            <a href="#publications">selected publications below</a>
+          </p>
+        </div>
+
+        <nav aria-label="Page sections">
+          <ul>
+            <li>
+              <a href="#introduction">Introduction</a>
+            </li>
+            <li>
+              <a href="#publications">Publications</a>
+            </li>
+            <li>
+              <a href="#supervision">Master’s students and supervision</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
         </nav>
-      </header>
+      </section>
 
-      <div className="pageShell" id="top">
-        <section className="hero" aria-labelledby="hero-title">
-          <div className="heroCopy">
-            <p className="eyebrow">Academic profile</p>
-            <h1 id="hero-title">Your Name</h1>
-            <p className="role">Professor · Researcher · Supervisor</p>
-            <p className="heroStatement">
-              Researching how evidence, ideas, and careful collaboration can
-              turn complex questions into useful knowledge.
-            </p>
-            <a className="textLink" href="#about">
-              Read my introduction <span aria-hidden="true">↓</span>
-            </a>
-          </div>
+      <hr />
 
-          <aside className="profileCard" aria-label="Profile and contact">
-            <div
-              className="photoPlaceholder"
-              role="img"
-              aria-label="Placeholder for your portrait photograph"
-            >
-              <span className="photoInitials">YN</span>
-              <span className="photoLabel">Add your photo</span>
-            </div>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <hr />
+        <p>
+          I am a researcher and educator interested in questions that matter
+          both within the university and beyond it. My work combines careful
+          analysis with open collaboration, with the aim of producing research
+          that is rigorous, clearly communicated, and useful to other scholars,
+          students, and practitioners.
+        </p>
+        <p>
+          This text can be replaced with your biography, current position,
+          research interests, and academic background.
+        </p>
+      </section>
 
-            <div className="contactCompact" id="contact">
-              <div>
-                <p className="contactLabel">Address</p>
-                <a
-                  href="https://maps.google.com/?q=University"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Department Name, University Name
-                  <br />
-                  Street, City, Country
-                </a>
-              </div>
-              <div>
-                <p className="contactLabel">Email</p>
-                <a href="mailto:your.name@university.edu">
-                  your.name@university.edu
-                </a>
-              </div>
-              <div className="profileLinks" aria-label="Research profiles">
-                <a
-                  href="https://scholar.google.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Google Scholar ↗
-                </a>
-                <a href="https://orcid.org/" target="_blank" rel="noreferrer">
-                  ORCID ↗
-                </a>
-              </div>
-            </div>
-          </aside>
-        </section>
+      <hr />
 
-        <section className="contentSection introSection" id="about">
-          <div className="sectionHeading">
-            <p className="sectionNumber">01</p>
-            <h2>Introduction</h2>
-          </div>
-          <div className="sectionBody introCopy">
-            <p className="lead">
-              I am a researcher and educator interested in questions that
-              matter both within the university and beyond it.
-            </p>
-            <p>
-              My work combines careful analysis with open collaboration. I aim
-              to produce research that is rigorous, clearly communicated, and
-              genuinely useful to other scholars, students, and practitioners.
-              This short introduction can be replaced with your biography,
-              research interests, current position, and academic background.
-            </p>
-            <p>
-              Alongside my research, I enjoy helping students develop focused
-              questions, build confidence in their methods, and communicate
-              their findings with precision.
-            </p>
-          </div>
-        </section>
+      <section id="publications">
+        <h2>Publications</h2>
+        <hr />
+        <p>
+          A complete list of publications can be found on my{" "}
+          <a href="https://scholar.google.com/">Google Scholar profile</a>.
+        </p>
+        <ol className="publicationList">
+          {publications.map((publication) => (
+            <li key={publication.title}>
+              {publication.authors}. <strong>{publication.title}.</strong>{" "}
+              <em>{publication.venue}.</em>{" "}
+              <a href={publication.href}>[link]</a>
+            </li>
+          ))}
+        </ol>
+      </section>
 
-        <section className="contentSection" id="publications">
-          <div className="sectionHeading">
-            <p className="sectionNumber">02</p>
-            <h2>Selected publications</h2>
-          </div>
-          <div className="sectionBody">
-            <div className="publicationList">
-              {publications.map((publication) => (
-                <article className="publication" key={publication.year + publication.title}>
-                  <p className="publicationYear">{publication.year}</p>
-                  <div>
-                    <h3>{publication.title}</h3>
-                    <p>{publication.authors}</p>
-                    <p className="publicationVenue">{publication.venue}</p>
-                  </div>
-                  <a
-                    className="publicationLink"
-                    href={publication.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Open link for ${publication.title}`}
-                  >
-                    DOI <span aria-hidden="true">↗</span>
-                  </a>
-                </article>
-              ))}
-            </div>
-            <a
-              className="textLink allPublications"
-              href="https://scholar.google.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View all publications on Google Scholar ↗
-            </a>
-          </div>
-        </section>
+      <hr />
 
-        <section className="contentSection supervisionSection" id="supervision">
-          <div className="sectionHeading">
-            <p className="sectionNumber">03</p>
-            <h2>Master’s students &amp; supervision</h2>
-          </div>
-          <div className="sectionBody">
-            <p className="lead supervisionLead">
-              I supervise master’s work that is well scoped, methodologically
-              sound, and connected to a meaningful question.
-            </p>
+      <section id="supervision">
+        <h2>Master’s students and supervision</h2>
+        <hr />
+        <p>
+          I supervise master’s work that is well scoped, methodologically sound,
+          and connected to a meaningful research question.
+        </p>
 
-            <div className="studentList" aria-label="Current and recent students">
-              {students.map((student, index) => (
-                <article className="student" key={`${student.name}-${index}`}>
-                  <div>
-                    <h3>{student.name}</h3>
-                    <p>{student.topic}</p>
-                  </div>
-                  <p className="studentPeriod">{student.period}</p>
-                </article>
-              ))}
-            </div>
+        <h3>Current and recent master’s students</h3>
+        <ul>
+          {students.map((student, index) => (
+            <li key={`${student.name}-${index}`}>
+              <strong>{student.name}</strong> ({student.period}). {student.topic}.
+            </li>
+          ))}
+        </ul>
 
-            <div className="supervisionNote">
-              <h3>Interested in working together?</h3>
-              <p>
-                Please email a short introduction, your programme, and one or
-                two possible research questions. I am especially happy to hear
-                from students who are curious, prepared to revise their ideas,
-                and comfortable working independently between meetings.
-              </p>
-              <a className="contactButton" href="mailto:your.name@university.edu">
-                Email about supervision <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+        <h3>Prospective students</h3>
+        <p>
+          If you are interested in working with me, please send a short
+          introduction, the name of your programme, and one or two possible
+          research questions by{" "}
+          <a href="mailto:your.name@university.edu">email</a>.
+        </p>
+      </section>
+
+      <hr />
 
       <footer>
-        <p>© {new Date().getFullYear()} Your Name</p>
-        <a href="#top">Back to top ↑</a>
+        <p>
+          Last updated July 2026 · <a href="#top">Back to top</a>
+        </p>
       </footer>
     </main>
   );
