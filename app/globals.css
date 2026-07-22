@@ -1,0 +1,518 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f5f3ee;
+  --paper-deep: #ebe8e0;
+  --ink: #18212c;
+  --muted: #68717a;
+  --blue: #315b78;
+  --blue-soft: #dce6eb;
+  --line: #d5d2ca;
+  --white: #fffdfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.24em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0 4vw;
+  border-bottom: 1px solid rgba(24, 33, 44, 0.12);
+  background: rgba(245, 243, 238, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.wordmark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+}
+
+.wordmarkDot {
+  color: var(--blue);
+}
+
+nav {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+nav a {
+  color: #3f4953;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover,
+.textLink:hover,
+.profileLinks a:hover,
+footer a:hover {
+  color: var(--blue);
+}
+
+.pageShell {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: clamp(4rem, 9vw, 9rem);
+  align-items: center;
+  min-height: calc(100vh - 72px);
+  padding: 6rem 0;
+}
+
+.eyebrow,
+.sectionNumber,
+.contactLabel,
+.publicationYear {
+  margin: 0;
+  color: var(--blue);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+h1 {
+  max-width: 720px;
+  margin: 0.4rem 0 0.25rem;
+  font-size: clamp(4.2rem, 9vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.role {
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroStatement {
+  max-width: 690px;
+  margin-bottom: 2.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 3vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.textLink {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.profileCard {
+  width: min(100%, 390px);
+  justify-self: end;
+}
+
+.photoPlaceholder {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 68% 18%, rgba(255, 255, 255, 0.55) 0 11%, transparent 11.5%),
+    linear-gradient(145deg, #cad8df, #7794a6 58%, #315b78);
+  color: var(--white);
+}
+
+.photoPlaceholder::before,
+.photoPlaceholder::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.photoPlaceholder::before {
+  width: 72%;
+  aspect-ratio: 1;
+  right: -28%;
+  bottom: -8%;
+}
+
+.photoPlaceholder::after {
+  width: 48%;
+  aspect-ratio: 1;
+  left: -20%;
+  top: 18%;
+}
+
+.photoInitials {
+  z-index: 1;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  letter-spacing: -0.08em;
+}
+
+.photoLabel {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contactCompact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  padding: 1.5rem 0 0;
+}
+
+.contactCompact a {
+  font-size: 0.84rem;
+}
+
+.contactLabel {
+  margin-bottom: 0.3rem;
+  color: var(--muted);
+  font-size: 0.63rem;
+}
+
+.profileLinks {
+  display: flex;
+  grid-column: 1 / -1;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.contentSection {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.38fr) minmax(0, 1fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  padding: 8rem 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 72px;
+}
+
+.sectionHeading {
+  align-self: start;
+}
+
+.sectionHeading h2 {
+  max-width: 270px;
+  margin: 0.7rem 0 0;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.sectionBody {
+  max-width: 760px;
+}
+
+.introCopy {
+  max-width: 700px;
+}
+
+.introCopy p:not(.lead),
+.supervisionNote p {
+  color: #454f58;
+}
+
+.lead {
+  margin-bottom: 2rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3.3vw, 2.7rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.publicationList {
+  border-top: 1px solid var(--ink);
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.publication h3,
+.student h3,
+.supervisionNote h3 {
+  margin-bottom: 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.publication p {
+  margin-bottom: 0.15rem;
+  color: #4d5760;
+  font-size: 0.88rem;
+}
+
+.publication .publicationVenue {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.publicationLink {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.allPublications {
+  margin-top: 2rem;
+}
+
+.supervisionLead {
+  max-width: 710px;
+}
+
+.studentList {
+  margin: 3rem 0 4rem;
+  border-top: 1px solid var(--ink);
+}
+
+.student {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.student h3 {
+  margin-bottom: 0.05rem;
+  font-size: 1.15rem;
+}
+
+.student p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.studentPeriod {
+  flex: 0 0 auto;
+}
+
+.supervisionNote {
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background: var(--blue-soft);
+}
+
+.supervisionNote h3 {
+  font-size: 1.7rem;
+}
+
+.contactButton {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+.contactButton:hover {
+  background: var(--blue);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 4vw;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.78rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 880px) {
+  .siteHeader {
+    align-items: flex-start;
+    min-height: auto;
+    padding-top: 1rem;
+    padding-bottom: 0.9rem;
+  }
+
+  nav {
+    max-width: 76vw;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.15rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 5rem 0 7rem;
+  }
+
+  .profileCard {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.7fr) 1fr;
+    gap: 2rem;
+    align-items: end;
+    width: 100%;
+    justify-self: start;
+  }
+
+  .contactCompact {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .profileLinks {
+    grid-column: auto;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contentSection {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 6rem 0;
+  }
+
+  .sectionHeading h2 {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .siteHeader {
+    position: relative;
+    display: block;
+    padding: 1rem 5vw;
+  }
+
+  nav {
+    justify-content: flex-start;
+    max-width: none;
+    margin-top: 0.6rem;
+    gap: 0.3rem 1rem;
+  }
+
+  nav a {
+    font-size: 0.68rem;
+  }
+
+  .pageShell {
+    width: 90vw;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  h1 {
+    font-size: clamp(3.7rem, 20vw, 6rem);
+  }
+
+  .profileCard {
+    display: block;
+  }
+
+  .contactCompact {
+    padding-top: 1.5rem;
+  }
+
+  .profileLinks {
+    flex-direction: row;
+  }
+
+  .publication {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .publicationLink {
+    grid-column: 2;
+  }
+
+  .student {
+    display: block;
+  }
+
+  .studentPeriod {
+    margin-top: 0.65rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
