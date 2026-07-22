@@ -41,7 +41,7 @@ export default function Home() {
           role="img"
           aria-label="Placeholder for a photograph of Zhuang Kang"
         >
-          Your photo
+          photo
         </div>
 
         <div className="contact" id="contact">
@@ -74,23 +74,6 @@ export default function Home() {
             <a href="#publications">publications</a>
           </p>
         </div>
-
-        <nav aria-label="Page sections">
-          <ul>
-            <li>
-              <a href="#recent-activities">Recent activities</a>
-            </li>
-            <li>
-              <a href="#introduction">Introduction</a>
-            </li>
-            <li>
-              <a href="#publications">Publications</a>
-            </li>
-            <li>
-              <a href="#supervision">Master’s students and supervision</a>
-            </li>
-          </ul>
-        </nav>
       </section>
 
       <hr />
@@ -107,6 +90,9 @@ export default function Home() {
             </a>
             .
           </li>
+          <li>
+            I present our work 'Simulation of AEM electroluzer with OpenFOAM and optimization' at WCCM ECCOMAS 2026, Munich.
+          </li>
         </ul>
       </section>
 
@@ -117,9 +103,13 @@ export default function Home() {
         <hr />
         <p>
           I am Zhuang Kang (康庄), a PhD candidate in computer science at Leiden
-          University, supervised by Yingjie Fan and Thomas Bäck. I work on
-          HyPro, a Dutch hydrogen research project, where I develop a digital
-          twin of a PEM electrolyzer.
+          University, supervised by Yingjie Fan and Thomas Bäck. I also work with Michael Emmerich from
+          University of Jyväskylä.
+        </p>
+        <p>
+          I work on HyPro, a Dutch hydrogen research project, where my delieverable is a digital
+          twin of electrolyzer. My current plan is developing a high-fidelity simulation
+          model of electrolyzers and then using multi-objective optimization to find its optimal design and control parameters.
         </p>
         <p>My research focuses on:</p>
         <ol>
@@ -128,10 +118,13 @@ export default function Home() {
           </li>
           <li>optimal control of hydrogen energy systems.</li>
         </ol>
-        <p>
-          With a background in mathematics, I now work at the intersection of
-          modeling, optimization, and hydrogen energy systems.
-        </p>
+        <ul>
+          <li> I have a background in mathematics and now work at the intersection of
+            modeling and optimization of energy systems.</li>
+          <li> Before joining Leiden Univerisity, I studied in Sichuan Univerisity for my bachelor, and Univerisity of 
+            Münster for my master, both in mathematics. Besides study, I also worked in ABB AG Mannheim where my work 
+            focused on the optimal control of energy systems.</li>
+        </ul>
       </section>
 
       <hr />
@@ -177,19 +170,25 @@ export default function Home() {
         <h3>Prospective students</h3>
         <p>I welcome students interested in:</p>
         <ol>
-          <li>optimal control of energy systems; or</li>
+          <li>optimal control and data-driven control of energy systems; or</li>
           <li>multiphysics simulation with OpenFOAM.</li>
+          <li>Black-box optimization of electrolyzers.</li>
         </ol>
         <p>
           To get in touch, send a short {" "}
           <a href="mailto:z.kang@liacs.leidenuniv.nl">email</a> with your name,
-          degree programme, and preferred topic. I will reply and arrange a
+           and preferred topic listed above. I will reply and arrange a
           meeting.
         </p>
         <p>
           Students have considerable freedom to develop their own research
-          direction. I value open discussion about research goals, timelines,
-          and practical concerns.
+          direction. For example, regarding the optimal control of energy systems, reinforcement learning, 
+          model predictive control and lots of other methods can be explored. The choice of method depends on
+          students' expertise and interest.
+        </p>
+        <p>
+          I value open discussion about research goals. If you have concern regarding timelines,
+          tuition fees and other practical matters, just talk to me.
         </p>
       </section>
 
