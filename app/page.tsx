@@ -86,7 +86,7 @@ export default function Home() {
             Our review paper, “A Review of Model-Based Optimization for Hydrogen
             Refueling Stations,” was published by Springer in June 2026. {" "}
             <a href="https://link.springer.com/chapter/10.1007/978-3-032-21893-3_17">
-              Read the paper
+              Link
             </a>
             .
           </li>
