@@ -61,15 +61,11 @@ a:focus-visible {
   margin: 0 20px 38px;
 }
 
-.photoPlaceholder {
-  display: grid;
-  place-items: center;
+.profilePhoto {
+  display: block;
   width: 160px;
-  height: 205px;
+  height: auto;
   border: 1px solid #888888;
-  background: #f4f4f4;
-  color: #555555;
-  font-size: 0.9rem;
 }
 
 .contact p:last-child {
@@ -116,9 +112,8 @@ footer {
     margin-left: 0;
   }
 
-  .photoPlaceholder {
+  .profilePhoto {
     width: 150px;
-    height: 192px;
   }
 
   nav {
@@ -149,7 +144,7 @@ footer {
     display: block;
   }
 
-  .photoPlaceholder {
+  .profilePhoto {
     margin-bottom: 20px;
   }
 

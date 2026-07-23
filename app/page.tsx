@@ -36,13 +36,13 @@ export default function Home() {
       <h1>Zhuang Kang</h1>
 
       <section className="profile" aria-label="Profile and contact information">
-        <div
-          className="photoPlaceholder"
-          role="img"
-          aria-label="Placeholder for a photograph of Zhuang Kang"
-        >
-          photo
-        </div>
+        <img
+          className="profilePhoto"
+          src="/ZhuangKang.jpg"
+          alt="Zhuang Kang"
+          width="4333"
+          height="6500"
+        />
 
         <div className="contact" id="contact">
           <p>
@@ -71,7 +71,7 @@ export default function Home() {
           <p>
             <strong>Profiles:</strong>{" "}
             <a href="https://orcid.org/0009-0009-8694-1947">ORCID</a>,{" "}
-            <a href="#publications">publications</a>
+            {/* <a href="#publications">publications</a> */}
           </p>
         </div>
       </section>
@@ -107,24 +107,24 @@ export default function Home() {
           University of Jyväskylä.
         </p>
         <p>
-          I work on HyPro, a Dutch hydrogen research project, where my delieverable is a digital
-          twin of electrolyzer. My current plan is developing a high-fidelity simulation
+          I work on HyPro, a Dutch hydrogen research project, where my delieverable is 'a digital
+          twin of electrolyzer'. My current plan is developing a high-fidelity simulation
           model of electrolyzers and then using multi-objective optimization to find its optimal design and control parameters.
         </p>
         <p>My research focuses on:</p>
         <ol>
           <li>
-            simulation and black-box optimization of electrolyzers; and
+            simulation and black-box optimization of electrolyzers.
           </li>
           <li>optimal control of hydrogen energy systems.</li>
+
         </ol>
         <ul>
-          <li> I have a background in mathematics and now work at the intersection of
-            modeling and optimization of energy systems.</li>
-          <li> Before joining Leiden Univerisity, I studied in Sichuan Univerisity for my bachelor, and Univerisity of 
-            Münster for my master, both in mathematics. Besides study, I also worked in ABB AG Mannheim where my work 
-            focused on the optimal control of energy systems.</li>
         </ul>
+        <p> I have a background in mathematics and now work at the intersection of
+          modeling and optimization of energy systems. Before joining Leiden Univerisity, I studied in Sichuan Univerisity for my bachelor, and Univerisity of 
+          Münster for my master, both in mathematics. Besides study, I also worked in ABB AG(Mannheim) where my work 
+          focused on the optimal control of energy systems.</p>
       </section>
 
       <hr />
@@ -170,7 +170,7 @@ export default function Home() {
         <h3>Prospective students</h3>
         <p>I welcome students interested in:</p>
         <ol>
-          <li>optimal control and data-driven control of energy systems; or</li>
+          <li>optimal control and data-driven control of energy systems</li>
           <li>multiphysics simulation with OpenFOAM.</li>
           <li>Black-box optimization of electrolyzers.</li>
         </ol>
