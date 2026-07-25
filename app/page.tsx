@@ -123,8 +123,7 @@ export default function Home() {
         </ul>
         <p> I have a background in mathematics and now work at the intersection of
           modeling and optimization of energy systems. Before joining Leiden Univerisity, I studied in Sichuan Univerisity for my bachelor, and Univerisity of 
-          Münster for my master, both in mathematics. Besides study, I also worked in ABB AG(Mannheim) where my work 
-          focused on the optimal control of energy systems.</p>
+          Münster for my master, both mathematics. Besides study, I also worked in ABB AG(Mannheim) Optimization&Control group.</p>
       </section>
 
       <hr />
