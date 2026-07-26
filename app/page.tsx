@@ -122,8 +122,9 @@ export default function Home() {
         <ul>
         </ul>
         <p> I have a background in mathematics and now work at the intersection of
-          modeling and optimization of energy systems. Before joining Leiden Univerisity, I studied in Sichuan Univerisity for my bachelor, and Univerisity of 
-          Münster for my master, both mathematics. Besides study, I also worked in ABB AG(Mannheim) Optimization&Control group.</p>
+          modeling and optimization of energy systems. Before joining Leiden Univerisity, I studied in Sichuan Univerisity and Univerisity of 
+          Münster for my bachelor and master, both in mathematics. Besides study, I also worked at ABB AG(Mannheim) Optimization&Control group 
+          where my focus was simulation and optimal control of energy systems.</p>
       </section>
 
       <hr />
@@ -169,9 +170,9 @@ export default function Home() {
         <h3>Prospective students</h3>
         <p>I welcome students interested in:</p>
         <ol>
-          <li>optimal control and data-driven control of energy systems</li>
+          <li>optimal control of energy systems</li>
           <li>multiphysics simulation with OpenFOAM.</li>
-          <li>Black-box optimization of electrolyzers.</li>
+          <li>Black-box optimization, either theoretical or practical aspects.</li>
         </ol>
         <p>
           To get in touch, send a short {" "}
