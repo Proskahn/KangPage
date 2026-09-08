@@ -93,6 +93,9 @@ export default function Home() {
           <li>
             I present our work 'Simulation of AEM electroluzer with OpenFOAM and optimization' at WCCM ECCOMAS 2026, Munich.
           </li>
+          <li>
+            My supervised master thesis, "Energy Management for Hydrogen Refueling Stations: A Synergistic Approach of Cascade Compression Architecture and Deep Reinforcement Learning" by Dunxiang Lu, has been accepted by International Journal of Hydrogen Energy.
+          </li>
         </ul>
       </section>
 
