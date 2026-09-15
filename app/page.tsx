@@ -83,6 +83,9 @@ export default function Home() {
         <hr />
         <ul>
           <li>
+            My supervised master thesis, "Energy Management for Hydrogen Refueling Stations: A Synergistic Approach of Cascade Compression Architecture and Deep Reinforcement Learning" by Dunxiang Lu, has been accepted by International Journal of Hydrogen Energy.
+          </li>
+          <li>
             Our review paper, “A Review of Model-Based Optimization for Hydrogen
             Refueling Stations,” was published by Springer in June 2026. {" "}
             <a href="https://link.springer.com/chapter/10.1007/978-3-032-21893-3_17">
@@ -93,9 +96,7 @@ export default function Home() {
           <li>
             I present our work 'Simulation of AEM electroluzer with OpenFOAM and optimization' at WCCM ECCOMAS 2026, Munich.
           </li>
-          <li>
-            My supervised master thesis, "Energy Management for Hydrogen Refueling Stations: A Synergistic Approach of Cascade Compression Architecture and Deep Reinforcement Learning" by Dunxiang Lu, has been accepted by International Journal of Hydrogen Energy.
-          </li>
+
         </ul>
       </section>
 
