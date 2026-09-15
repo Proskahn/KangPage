@@ -81,7 +81,7 @@ export default function Home() {
       <section id="recent-activities">
         <h2>Recent activities</h2>
         <hr />
-        <ul>
+        <ul className="activityList">
           <li>
             My supervised master thesis, "Energy Management for Hydrogen Refueling Stations: A Synergistic Approach of Cascade Compression Architecture and Deep Reinforcement Learning" by Dunxiang Lu, has been accepted by International Journal of Hydrogen Energy.
           </li>

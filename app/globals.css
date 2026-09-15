@@ -86,6 +86,10 @@ li {
   margin-bottom: 5px;
 }
 
+.activityList {
+  list-style-type: disc;
+}
+
 hr {
   clear: both;
   margin: 24px 0 18px;
