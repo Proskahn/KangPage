@@ -7,6 +7,12 @@ const publications = [
       "Advances in Evolutionary and Deterministic Methods for Design, Optimization and Control, Springer, 2026",
     href: "https://link.springer.com/chapter/10.1007/978-3-032-21893-3_17",
   },
+  {
+    title: "Energy management for hydrogen refueling stations: A synergistic approach of cascade compression architecture and deep reinforcement learning",
+    authors: "Dunxiang Lu, Zhuang Kang, Thomas Bäck, Yingjie Fan",
+    venue: "International Journal of Hydrogen Energy, Volume 275, 2026, 157506",
+    href: "https://authors.elsevier.com/sd/article/S0360-3199(26)04144-3",
+  }
 ];
 
 const formerStudents = [
